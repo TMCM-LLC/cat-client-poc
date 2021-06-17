@@ -25,9 +25,14 @@ const CatDetail = ({history}) => {
         <div>
             <h1>{cat.name}</h1>
             <p>{cat.description}</p>
-
+            <br />
+            { cat.imageUrl ? 
+            <img src={ cat.imageUrl } alt={ cat.name } width="500" />
+            : '' }
+            <br/><br/>
             <Link to="/">Back to Cat List</Link> |  
-            <Link to={ `/${cat.id}/edit`}>Edit</Link>
+            <Link to={ `/${cat.id}/edit`}>Edit</Link> | 
+            <Link to={ `/${cat.id}/photo`}>Edit Photo</Link>
         </div>
     );
 };

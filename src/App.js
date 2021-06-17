@@ -8,6 +8,7 @@ import './App.css';
 import CatDetail from "./components/CatDetail";
 import CatEdit from "./components/CatEdit";
 import Cats from './components/Cats';
+import CatUpload from "./components/CatUpload";
 import Login from './components/Login';
 import NewCat from "./components/NewCat";
 import PrivateRoute from "./components/PrivateRoute";
@@ -34,6 +35,7 @@ function App() {
                     </Route>
                     <PrivateRoute path="/new" component={ NewCat } />
                     <PrivateRoute path="/:catId/edit" component={ CatEdit } />
+                    <PrivateRoute path="/:catId/photo" component={ CatUpload } />
                     <Route path="/:catId">
                         <CatDetail />
                     </Route>
